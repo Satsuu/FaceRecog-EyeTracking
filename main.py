@@ -1,7 +1,7 @@
 import face_recognition
 import cv2
 import numpy as np
-
+import os
 
 
 # This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the
@@ -18,11 +18,11 @@ video_capture = cv2.VideoCapture(1)
 
 
 # Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("face_recognition/obama.jpg")
+obama_image = face_recognition.load_image_file("face_recognition/picture/obama.jpg")
 obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("face_recognition/biden.jpg")
+biden_image = face_recognition.load_image_file("face_recognition/picture/biden.jpg")
 biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 
 # Create arrays of known face encodings and their names
